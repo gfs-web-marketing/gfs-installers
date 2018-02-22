@@ -1,7 +1,7 @@
 <?php
 namespace Gfs\Installers;
 
-use Composer\Installer\Installer;
+use Composer\Installers\Installer;
 use Composer\Package\PackageInterface;
 
 class GfsInstaller extends Installer {
