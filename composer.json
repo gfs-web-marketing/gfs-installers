@@ -1,0 +1,17 @@
+{
+    "name": "gfs/gfs-installers",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {"GfsInstallers": "src/"}
+    },
+    "extra": {
+        "class": "GfsInstallers\\GfsInstallersPlugin"
+    },
+    "require": {
+        "composer-plugin-api": "^1.0"
+    },
+    "require-dev": {
+        "composer/composer": "^1.3"
+    }
+}
