@@ -10,17 +10,17 @@ class GfsBaseInstaller extends BaseInstaller {
   /**
    * {@inheritDoc}
    */
-  public function getInstallPath(PackageInterface $package) {
-    $prefix = substr($package->getPrettyName(), 0, 23);
-    if ('gfs/' !== $prefix) {
+  public function getInstallPath(PackageInterface $package, $frameworkType = '') {
+    $prefix = substr($package->getPrettyName(), 0, 20);
+    if ('gordon-food-service/' !== $prefix) {
         throw new \InvalidArgumentException(
             'Unable to install template, GFS templates '
             .'should always start their package name with '
-            .'"gfs/"'
+            .'"gordon-food-service/". Was ' . $package->getPrettyName()
         );
     }
 
-    return parent::getInstallPath($package);
+    return parent::getInstallPath($package, $frameworkType);
   }
 
 }

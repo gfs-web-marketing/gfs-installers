@@ -22,9 +22,18 @@ class GfsInstaller extends Installer {
     $type = $package->getType();
     $frameworkType = $this->findFrameworkType($type);
 
+    $count = count($this->supportedTypes);
+    foreach($this->supportedTypes as $key => $className) {
+      $supported = $key;
+      if (--$count <= 0) {
+          break;
+      }
+      $supported += ', ';
+    }
+
     if ($frameworkType === false) {
         throw new \InvalidArgumentException(
-            'Sorry the package type of this package is not yet supported.'
+            'Sorry the package type "' . $type . '" is not yet supported. Supported types: ' . $supported;
         );
     }
 
@@ -60,8 +69,7 @@ class GfsInstaller extends Installer {
    * @param  string $type
    * @return string
    */
-  protected function findFrameworkType($type)
-  {
+  protected function findFrameworkType($type) {
       $frameworkType = false;
 
       krsort($this->supportedTypes);
@@ -74,6 +82,15 @@ class GfsInstaller extends Installer {
       }
 
       return $frameworkType;
+  }
+
+  /**
+   * Get I/O object
+   *
+   * @return IOInterface
+   */
+  private function getIO() {
+      return $this->io;
   }
 
 }
