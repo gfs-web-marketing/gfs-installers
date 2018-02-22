@@ -3,7 +3,7 @@
 namespace Gfs\Installers;
 
 use Composer\Package\PackageInterface;
-use Composer\Installer\BaseInstaller;
+use Composer\Installers\BaseInstaller;
 
 class GfsBaseInstaller extends BaseInstaller {
 
