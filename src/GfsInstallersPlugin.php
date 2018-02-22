@@ -11,6 +11,5 @@ class GfsInstallersPlugin implements PluginInterface {
     echo 'gfs installer';
     $installer = new GfsInstaller($io, $composer);
     $composer->getInstallationManager()->addInstaller($installer);
-
   }
 }
