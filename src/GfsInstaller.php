@@ -28,7 +28,7 @@ class GfsInstaller extends Installer {
         );
     }
 
-    $class = 'GfsInstallers\\' . $this->supportedTypes[$frameworkType];
+    $class = 'Gfs\\Installers\\' . $this->supportedTypes[$frameworkType];
     $installer = new $class($package, $this->composer, $this->getIO());
 
     return $installer->getInstallPath($package, $frameworkType);
@@ -44,7 +44,7 @@ class GfsInstaller extends Installer {
   protected function getLocationPattern($frameworkType) {
     $pattern = false;
     if (!empty($this->supportedTypes[$frameworkType])) {
-        $frameworkClass = 'GfsInstallers\\' . $this->supportedTypes[$frameworkType];
+        $frameworkClass = 'Gfs\\Installers\\' . $this->supportedTypes[$frameworkType];
         /** @var BaseInstaller $framework */
         $framework = new $frameworkClass(null, $this->composer, $this->getIO());
         $locations = array_keys($framework->getLocations());
