@@ -33,7 +33,7 @@ class GfsInstaller extends Installer {
 
     if ($frameworkType === false) {
         throw new \InvalidArgumentException(
-            'Sorry the package type "' . $type . '" is not yet supported. Supported types: ' . $supported;
+            'Sorry the package type "' . $type . '" is not yet supported. Supported types: ' . $supported
         );
     }
 
