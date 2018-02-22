@@ -1,6 +1,6 @@
 <?php
 
-namespace GfsInstallers\Composer;
+namespace GfsInstallers;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
@@ -9,7 +9,7 @@ use Composer\Plugin\PluginInterface;
 class GfsInstallersPlugin implements PluginInterface {
   public function activate(Composer $composer, IOInterface $io) {
 
-    $installer = new GfsChatbotLibraryInstaller($io, $composer);
+    $installer = new GfsInstaller($io, $composer);
     $composer->getInstallationManager()->addInstaller($installer);
 
   }
