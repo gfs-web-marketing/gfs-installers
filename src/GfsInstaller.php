@@ -1,5 +1,5 @@
 <?php
-namespace GfsInstallers;
+namespace Gfs\Installers;
 
 use Composer\Installer\Installer;
 use Composer\Package\PackageInterface;

@@ -3,10 +3,10 @@
     "type": "composer-plugin",
     "license": "MIT",
     "autoload": {
-        "psr-0": {"GfsInstallers": "src/"}
+        "psr-4": {"Gfs\\Installers\\": "src/"}
     },
     "extra": {
-        "class": "GfsInstallers\\GfsInstallersPlugin"
+        "class": "Gfs\\Installers\\GfsInstallersPlugin"
     },
     "require": {
         "composer-plugin-api": "^1.0"

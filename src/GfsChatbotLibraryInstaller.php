@@ -1,6 +1,6 @@
 <?php
 
-namespace GfsInstallers;
+namespace Gfs\Installers;
 
 class GfsChatbotLibraryInstaller extends GfsBaseInstaller {
 
