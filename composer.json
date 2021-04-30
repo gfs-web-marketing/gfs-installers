@@ -1,5 +1,6 @@
 {
     "name": "gordon-food-service/gfs-installers",
+    "description": "Provide external dependencies in different locations in your Drupal application through Composer",
     "type": "composer-plugin",
     "license": "MIT",
     "autoload": {
